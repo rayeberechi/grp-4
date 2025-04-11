@@ -1,0 +1,884 @@
+:root {
+    --primary-light: #ffffff;
+    --secondary-light: #f0efff;
+    --accent-main: #4d47c3;
+    --accent-light: #8e8ad9;
+    --accent-dark: #3f3d56;
+
+    --success-color: #e0fff2;
+    --success-dark: #00ff9f;
+    --success-bg: #00cc7f;
+    --success-hover: #008000;
+
+    --error-color: #ff0033;
+    --error-light: #ffe0e0;
+    --error-bg: #cc0028;
+
+    --neutral-dark-1: #ffffff;
+    --neutral-dark-2: #f0efff;
+    --neutral-dark-3: #e6e6fa;
+    --neutral-dark-4: #dcdcff;
+    --neutral-dark-5: #b9b6ff;
+    --neutral-dark-6: #8e8ad9;
+
+    --highlight-color: #f0efff;
+    --white: #fff;
+    --black: #000;
+    --dark: #333333; /* Added definition for --dark */
+
+    /* trophy */
+    --gold-color: #daa520; 
+    --silver-color: #c0c0c0; 
+    --bronze-color: #512c08;
+    --skin-color: #d8905f;    
+}
+
+body.light-theme {
+    background: linear-gradient(
+        to bottom left,
+        var(--neutral-dark-1),
+        var(--neutral-dark-2),
+        var(--neutral-dark-3),
+        var(--neutral-dark-4),
+        var(--neutral-dark-5),
+        var(--neutral-dark-6)
+    );
+}
+
+.App-light.light-theme {
+    background: linear-gradient(to top right, var(--neutral-dark-1), var(--neutral-dark-3), var(--neutral-dark-6));
+    box-shadow: 0px 4px 6px rgba(77, 71, 195, 0.3);
+    color: var(--dark);
+    height: 90vh;
+    width: 80%;
+    margin: 30px auto;
+    padding: 10px 20px;
+}
+
+.App-light .main-page {
+    background: linear-gradient(to top right, var(--neutral-dark-1), var(--neutral-dark-2), var(--neutral-dark-3), var(--neutral-dark-4), var(--neutral-dark-5), var(--neutral-dark-6));
+    box-shadow: 0px 4px 6px rgba(77, 71, 195, 0.3);
+    color: var(--dark);
+    height: 80vh;
+    width: 80%;
+    margin: 30px auto;
+    margin-top: -50px;
+    padding: 10px 20px;
+}
+
+.App-light .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.App-light .quiz-title img {
+    width: 100px;
+    filter: saturate(0%) brightness(110%) contrast(110%);
+}
+.App-light .theme {
+    border: 1px dotted var(--accent-dark);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.App-light .gold-icon {
+    color: var(--accent-main);
+}
+
+.main-page h1 {
+    color: var(--dark);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.App-light.info {
+    margin: 10px 0 20px 40px;
+    font-size: 1.4rem;
+}
+.App-light .info-title span {
+    color: var(--accent-main);
+    font-size: 1.8rem;
+    font-weight: 600;    
+}
+.info-list {
+    margin: 20px 40px;
+    color: var(--dark);
+}
+
+.name-input {
+    margin: 5px 0 5px 340px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--highlight-color);
+    color: var(--dark);
+    font-size: 1.4rem;
+    transition: background-color 0.3s ease;
+}
+
+.App-light .btns {
+    margin: 50px 15px 0 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.App-light .btns .quit {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--accent-dark);
+    color: var(--neutral-dark-5);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.App-light .btns .quit:hover {
+    background-color: var(--error-color); 
+    color: var(--white);
+}
+
+.App-light .btns .restart {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--accent-dark);
+    color: var(--neutral-dark-5);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+.App-light .btns .restart:hover {
+    background-color: var(--success-hover);
+    color: var(--white);
+}
+
+.App-light .quiz-options {
+    margin: 30px 70px;
+    text-align: center;
+}
+.App-light .quiz-options .difficulty {
+    margin-bottom: 40px;
+}
+.App-light .difficulty h1, .category h1 {
+    margin-bottom: 15px;
+    color: var(--accent-light);
+}
+
+.App-light .dif-btn button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: 1px dotted var(--accent-dark);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--accent-dark);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.App-light .dif-btn button:hover {
+    background-color: var(--accent-dark);
+    color: var(--neutral-dark-6);
+    transform: scale(1.1);
+}
+
+.App-light .cat-btn button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--accent-dark);
+    color: var(--neutral-dark-5);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.App-light .cat-btn button:hover {
+    background-color: transparent;
+    color: var(--accent-dark);
+    border: 1px solid var(--accent-dark);
+    border-width: 5px;
+    transform: scale(1.1);
+}
+
+.App-light .quiz-options button.enter-quiz.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.App-light .enter-quiz {
+    margin: 50px 0;
+    background-color: transparent;
+    border: 5px dotted var(--accent-dark);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+}
+.App-light .enter-quiz:hover {
+    background-color: var(--accent-dark);
+    color: var(--neutral-dark-4);
+    transform: scale(0.95);
+}
+
+.App-light .App-light .quiz-box {
+    color: #f5f5dc;
+    width: 70%;
+    border-radius: 5px;
+    margin-top: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(206, 150, 8, 0.4);
+    background-color: var(--neutral-dark-6);    
+}
+
+.App-light .quiz-box.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.App-light .quiz-box.header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid var(--accent-main);
+    border-radius: 5px;
+    padding:  0 8px;
+    user-select: none;
+}
+.App-light .time-text {
+    font-size: 1.15rem;
+}
+.App-light .timer-sec {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--accent-dark);
+    height: 30px;
+    width: 45px;
+    color: var(--secondary-light);
+    text-align: center;
+    align-content: center;
+    line-height: 10px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.App-light .time-line {
+    left: 0px;
+    height: 3px;
+    background: var( --error-color);
+    transition: width 1s linear;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.App-light .quiz-box section {
+    padding: 25px 30px 20px 30px;
+}
+
+.App-light .que-text {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.App-light .option-list {
+    padding: 20px 0;
+    display: block;
+}
+.App-light .option {
+    border: 1px solid var(--accent-main);
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.App-light .option:hover {
+    color: var(--success-bg);
+    background: var(--accent-main);
+}
+
+
+.App-light.option:last-child {
+    margin-bottom: 0px;
+}
+
+.App-light .option .icon {
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+}
+
+.App-light .icon.tick {
+    border-color: var(--success-color);
+    color: var(--success-color);
+    background: var(--success-bg);
+}
+
+.App-light .icon.cross {
+    border-color: var(--error-light);
+    color: var(--error-light);
+    background: var(--error-bg);
+}
+
+.App-light .option-list .option.correct {
+    border-color: #c3e6cb;
+    color: var(--success-color);
+    background: var(--success-bg);
+}
+.App-light .option-list .option.incorrect {
+    border-color: #f5c6cb;
+    color: var(--error-light);
+    background: var(--error-bg);
+}
+.App-light .option-list .option.disabled {
+    pointer-events: none;
+    
+}
+
+.App-light .quiz-box footer {
+    background: var(--neutral-dark-5);
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.App-light .total-que span {
+    display: flex;
+    user-select: none;
+}
+
+.total-que span p {
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.App-light .total-que span p:first-child {
+    padding-left: 0px;
+}
+
+.App-light .q-btn {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.App-light .next-btn {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: var(--secondary-light);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--accent-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.App-light .next-btn:hover {
+    background: #008000;
+    color: var(--white);
+    border: none;
+}
+
+.App-light .prv-btn {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: var(--neutral-dark-6);
+    background-color: var(--accent-main);
+    border-radius: 5px;
+    border: 1px solid var(--accent-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.App-light .prv-btn:hover {
+    background: var(--error-color);
+    border: none;
+    color: var(--white);
+}
+
+.App-light .result-box {
+    text-align: center;
+    color: #f5f5dc;
+    width: 70%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 30px;
+    box-shadow: 0px 4px 6px rgba(206, 150, 8, 0.4);
+    background-color: var(--neutral-dark-6);    
+}
+
+.App-light .result-box .icon {
+    font-size: 6rem;
+    margin-bottom: 10px;    
+}
+
+.App-light .result-box .complete-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.App-light .score-text span {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.App-light .score-text span p {
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+.App-light .gold {
+    color: var(--gold-color);
+}
+.App-light .silver {
+    color: var(--silver-color);
+}
+.App-light .bronze {
+    color: var(--bronze-color);
+}
+.App-light .red {
+    color: var( --error-color);
+}
+
+.App-light .result-box .btns {
+    padding: 20px;
+    border-top: 1px solid #ffcc00;
+}
+/* Responsiveness */
+/* Tablets - 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .App-light .name-input {
+        margin-left: 250px;
+    }
+    .App-light .main-page {
+        margin-top: -40px;
+    }
+    .App-light .quiz-options {
+        margin-top: -15px;
+    }
+    .App-light .q-btn {
+        margin-left: 20px;
+    }
+    .App-light .quiz-box {
+        height: 80vh;
+    }
+    .App-light .quiz-box footer {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 845px) {
+    .App-light .quiz-title img {
+        width: 80px;
+        margin-left: -20px;
+    }
+    .App-light .main-page {
+        margin-top: -65px;
+    }
+    .App-light .main-page h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    .App-light .info-title span {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .App-light .info {
+        margin: 10px 0 20px 20px;
+        font-size: 1rem;
+    }
+    .App-light .name-input {
+        height: 5vh;
+        font-size: 1rem;
+        margin: 5px 0 0 190px;
+    }
+    .App-light .main-page .btns {
+        height: 9vh;
+        font-size: 0.5rem;
+        margin: 20px 0 0 0;
+    }
+    .App-light .quiz-options {
+        margin-top: -40px;
+    }
+    .App-light .quiz-options h1 {
+        font-size: 1.5rem;
+        width: 200%;
+        margin-left: -350px;
+    }
+    .App-light .quiz-options button {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    .App-light .quiz-options .cat-btn {
+        margin-bottom: 20px;
+    }
+    .App-light .enter-quiz {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        margin-top: -0.1px;
+    }
+    .App-light .quiz-box {
+        height: 80vh;
+    }
+    .App-light .quiz-box .timer {
+        display: none;
+    }
+    .App-light .quiz-box section {
+        margin-top: -30px;
+    }
+    .App-light .que-text {
+        font-size: 1.2rem;
+        width: 120%;
+        margin: 0 20px 15px -40px;
+    }
+    .App-light .option-list {
+        margin-left: -30px;
+        margin-top: -25px;
+    }
+    .App-light .option-list .icon {
+        width: 20px;
+        height: 20px;
+    }
+    .App-light .option {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        height: 6vh;
+    }
+    .App-light .quiz-box footer {
+        margin-top: -40px;
+    }
+    .App-light .q-btn {
+        margin-left: 20px;
+    }
+    .App-light .q-btn button {
+        font-size: 0.8rem;
+        height: 4vh;
+    }
+    .App-light .result-box {
+        margin-top: -60px;
+        height: 70vh;
+    }
+    .App-light .result-box .icon {
+        font-size: 5rem;
+    }
+    .App-light .result-box .score-text {
+        margin-bottom: -30px;
+    }
+    .App-light .result-box .btns {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 821px) {
+    .App-light .name-input {
+        margin-left: 155px;
+    }
+    .App-light .main-page {
+        margin-top: 10px;
+    }
+    .App-light .quiz-options {
+        margin-top: 15px;
+    }
+    .App-light .quiz-title img {
+        margin-left: -20px;
+    }
+    .App-light .quiz-box {
+        height: 60vh;
+    }
+}
+
+/* Big phones + small tablets - 481px to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .App-light .name-input {
+        margin-left: 130px;
+    }
+    .App-light .quiz-title img {
+        margin-left: -20px;
+    }
+    .App-light .q-btn {
+        margin-left: 15px;
+    }
+    .App-light .q-btn .next-btn {
+        margin-right: -20px;
+    }
+    .App-light .result-box .quit {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 721px) {
+    .App-light .main-page h1 {
+        font-size: 1.7rem;
+        margin-bottom: 0;
+    }
+    .App-light .info-title span {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .App-light .info {
+        margin: 10px 0 20px 20px;
+        font-size: 1.2rem;
+    }
+    .App-light .name-input {
+        height: 5vh;
+        font-size: 1.2rem;
+        margin: 2px 0 0 0;
+    }
+    .App-light .main-page .btns {
+        margin: 20px 0 0 0;
+        height: 7vh;
+    }
+    .App-light .quiz-options h1 {
+        font-size: 1.5rem;
+    }
+    .App-light .quiz-options button {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+    .App-light .enter-quiz {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        margin-top: -0.1px;
+    }
+    .App-light .category {
+        margin-bottom: 20px;
+    }
+    .App-light .quiz-box .timer {
+        display: none;
+    }
+    .App-light .quiz-box section {
+        margin-top: -25px;
+    }
+    .App-light .que-text {
+        font-size: 1.3rem;
+    }
+    .App-light .option-list {
+        padding: 10px 0;
+    }
+    .App-light .option {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        height: 4vh;
+    }
+    .App-light .quiz-box footer {
+        margin-top: -25px;
+    }
+    .App-light .quiz-box button {
+        font-size: 0.9rem;
+        height: 4vh;
+    }
+    .App-light .result-box {
+        margin-top: -50px;
+    }
+}
+
+/* Phones */
+@media (max-width: 415px) {
+    .App-light .name-input {
+        margin-left: 25px;
+    }
+    .App-light .main-page .btns {
+        margin-left: 20px;
+    }
+    .App-light .quiz-title img {
+        width: 70px;
+        margin-left: -40px;
+    }
+    .App-light .theme {
+        margin-right: -20px;
+    }
+    .App-light .quiz-options h1 {
+        margin-left: -130px;
+    }
+    .App-light .quiz-box .que-text {
+        font-size: 1.2rem;
+        width: 135%;
+        margin: 0 20px 15px -25px;
+    }
+    .App-light .option-list {
+        width: 130%;
+        margin-left: -30px;
+        margin-top: -10px;
+    }
+    .App-light .quiz-box footer {
+        margin-top: 20px;
+        display: block;
+    }
+    .App-light .total-que {
+        margin-bottom: 20px;
+    }
+    .App-light .q-btn {
+        display: grid;
+        gap: 10px;
+        margin-left: 20px;
+    }
+    .App-light .q-btn button {
+        font-size: 0.9rem;
+        height: 4vh;
+    }
+    .App-light .result-box i {
+        font-size: 4rem;
+    }
+    .App-light .result-box .complete-text {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .App-light .score-text span {
+        width: 180%;
+        margin-left: -90px;
+    }
+    .App-light .result-box .btns {
+        display: grid;
+        gap: 10px;
+    }
+    .App-light .result-box .btns .quit {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .App-light .result-box .btns .restart {
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 376px) {
+    .App-light .main-page {
+        margin-top: -15px;
+    }
+    .App-light .main-page h1 {
+        font-size: 1.1rem;
+    }
+    .App-light .info-title span {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .App-light .info {
+        margin: 10px 0 20px 0;
+        font-size: 1rem;
+    }
+    .App-light .name-input {
+        margin-left: 10px;
+    }
+    .App-light .main-page .btns {
+        margin: 40px 0 0 10px;
+        height: 8vh;
+        font-size: 0.5rem;
+        gap: 10px;
+    }
+    .App-light .quiz-options {
+        margin-top: -10px;
+    }
+    .App-light .quiz-options h1 {
+        font-size: 1.2rem;
+        width: 200%;
+        margin-left: -100px;
+    }
+    .App-light .quiz-options .dif-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .App-light .quiz-options .cat-btn {
+        margin-bottom: 40px;
+    }
+    .App-light .cat-btn .comp {
+        margin-left: 20px;
+    }
+    .App-light .cat-btn .g-k {
+        margin-left: 13px;
+    }
+    .App-light .quiz-title img {
+        width: 70px;
+        margin-left: -38px;
+    }
+    .App-light .theme {
+        margin-right: -20px;
+    }
+    .App-light .quiz-box {
+        height: 80vh;
+    }
+    .App-light .que-text {
+        font-size: 0.7rem;
+        width: 180%;
+        margin: 0 20px 15px -25px;
+    }
+    .App-light .option-list {
+        width: 130%;
+        margin-left: -20px;
+    }
+    .App-light .option-list .icon {
+        width: 20px;
+        height: 20px;
+    }
+    .App-light .option {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        height: 5vh;
+    }
+    .App-light .quiz-box footer {
+        margin: 10px 20px 10px 0;
+        display: block;
+    }
+    .App-light .total-que {
+        margin-bottom: 5px;
+        margin-left: -10px;
+    }
+    .App-light .q-btn {
+        display: grid;
+        gap: 10px;
+        margin-left: 5px;
+    }
+    .App-light .complete-text {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .App-light .score-text span {
+        width: 180%;
+        margin-left: -85px;
+    }
+    .App-light .result-box .btns {
+        display: grid;
+        gap: 10px;
+    }
+    .App-light .result-box .btns .quit {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .App-light .result-box .btns .restart {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+}
