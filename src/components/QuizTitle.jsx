@@ -8,7 +8,7 @@ const QuizTitle = ({ toggleTheme, isLightTheme }) => {
             </div>
 
             <div className="theme" onClick={toggleTheme}>
-                <i className={`fa-solid ${isLightTheme ? 'fa-sun gold-icon' : 'fa-moon'}`}></i>
+                <i className={`fa-solid ${isLightTheme ? 'fa-arrows-to-dot' : 'fa-arrows-to-dot'}`}></i>
             </div>
         </div>
     );

@@ -16,6 +16,7 @@ Welcome to The Quadra, the quiz app that'll briefly test your knowledge on eithe
 
 ## Features
 
+  - **Login/Sign Up Page**
   - **Timed Quizzes:** You've got 15 seconds per question – no dilly-dallying\!
   - **No Take-Backs:** Once you pick an answer, that's it\! Choose wisely.
   - **Score Tracking:** Points are awarded for correct answers.
@@ -32,10 +33,12 @@ Welcome to The Quadra, the quiz app that'll briefly test your knowledge on eithe
 
   - React
   - React Router DOM
+  - React Icons
   - Axios
   - Local Storage
   - CSS
   - Font Awesome
+  -  Google Font
   - Open Trivia DB
 
 ## Getting Started
@@ -72,6 +75,11 @@ quadra-quiz-app/
 ├── public/
 │   └── Images and Logos
 ├── src/
+│   ├── component/
+│   │   ├── LoginPage.jsx
+│   │   ├── LoginPage.css
+│   │   ├── SignupPage.jsx
+│   │   ├── SignupPage.css
 │   ├── components/
 │   │   ├── QuizTitle.jsx
 │   │   ├── TimeLine.jsx
@@ -93,24 +101,26 @@ quadra-quiz-app/
 
 ## Usage
 
-1.  **Landing Page (`/`):**
+1.  **Login Page (`/`):** This is the main page that prompts the user to login to start playing and prompts a first time user to sign up,.
+2.  **Sign Up Page (`/signup`):** This page is for first time users to sign up and then it redirects them to login and progresses to the welcome page and then the quiz.
+3. **Landing Page (`/landing`):**
 
       - Welcome to The Quadra\! Enter your name and get ready to progress to the game setup where you'll select a difficultry level and questions category.
 
-2.  **Game Options (`/gameOpt`):**
+4.  **Game Options (`/gameOpt`):**
 
       - Choose your quiz difficulty and category.
       - Hit "Enter Quiz" to progress to the main Quiz.
 
-3.  **Quiz Page (`/quiz`):**
+5.  **Quiz Page (`/quiz`):**
 
       - Answer questions within the 15-second time limit.
       - Use the "Next" and "Previous" buttons to navigate.
 
-4.  **Result Page (`/result`):**
+6.  **Result Page (`/result`):**
 
       - See your score and a message/trophy as per your perormance.
-      - Restart the quiz or exit and lick your wounds.
+      - Restart the quiz or exit.
 
 ## Routing
 
@@ -126,7 +136,7 @@ quadra-quiz-app/
   - **Leaderboards:** Implement leaderboards for a competitive edge.
   - **Sound Effects:** Add sound effects for correct/incorrect answers and timers.
   - **Animations:** Add some animations to make it pop.
-  - **Responsiveness:** Ensure that the app works seamlessly on all devices.
+  - **Responsiveness:** Ensure that the app works seamlessly on all device types.
 
 ## Credits
 

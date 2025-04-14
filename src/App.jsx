@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import QuizTitle from "./components/QuizTitle";
+import LoginPage from "./component/LoginPage";
+import SignupPage from "./component/SignupPage";
 import LandingPage from "./pages/LandingPage";
 import GameOpt from "./pages/GameOpt";
 import Quiz from "./pages/Quiz";
@@ -35,7 +37,9 @@ function App() {
                 <QuizTitle toggleTheme={toggleTheme} isLightTheme={isLightTheme}/>
             </header>
             <Routes>
-                <Route path="/" element={<LandingPage setPage={setPage} />} />
+                <Route path="/" element={<LoginPage setPage={setPage} />} />
+                <Route path="/signup" element={<SignupPage setPage={setPage} />} />
+                <Route path="/landing" element={<LandingPage setPage={setPage} />} />
                 <Route path="/gameOpt" element={<GameOpt setQuestions={setQuestions} setPage={setPage} />} />
                 <Route path="/quiz" element={<Quiz questions={questions} userAnswers={userAnswers} setUserAnswers={setUserAnswers} score={score} setScore={setScore} setPage={setPage} />} />
                 <Route path="/result" element={<Result score={score} questions={questions} setPage={setPage} setScore={setScore} />} />

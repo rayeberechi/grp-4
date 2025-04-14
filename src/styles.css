@@ -239,6 +239,10 @@ body {
     background-color: var(--neutral-dark-6);    
 }
 
+* .fa-arrows-to-dot {
+    color: #4d47c3;
+}
+
 .quiz-box header {
     display: flex;
     justify-content: flex-end;
@@ -481,6 +485,8 @@ body {
     padding: 20px;
     border-top: 1px solid #ffcc00;
 }
+/* Responsiveness */
+@
 
 /* Tablets - 769px to 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
